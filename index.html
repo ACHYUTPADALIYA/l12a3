@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p>Enterd a number and click OK</p>
+    <input id="i1" type="number" min="18" max="50" required>
+    <button onclick="myFunction()">OK</button>
+    <p>If the number is lesser than 18 or greater than 50, an error message will be displayed</p>
+    <p id="res"></p>
+    <script>
+        function myFunction(){
+            var inpObj = document.getElementById("i1");
+            if(!inpObj.checkValidity()){
+                document.getElementById("res").innerHTML = inpObj.validationMessage;
+            }else{
+                document.getElementById("res").innerHTML = "Input Ok"
+            }
+        }
+    </script>
+</body>
+</html>
